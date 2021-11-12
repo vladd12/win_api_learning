@@ -1,2 +1,2 @@
-# win_api_learning
+# WIN API Learning
 Learning Win32 API
