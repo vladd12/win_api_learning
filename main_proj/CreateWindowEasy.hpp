@@ -43,7 +43,7 @@ namespace MainWindow {
 
 		// Создаём главное окно и отображаем его
 		DWORD wndStyle = WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX;
-		HWND hMainWnd = CreateWindow(L"MainWindowClass", L"Ћабы по ќ—", wndStyle,
+		HWND hMainWnd = CreateWindow(L"MainWindowClass", L"Лабы по ОС", wndStyle,
 			CW_USEDEFAULT, CW_USEDEFAULT, 300, 165, NULL, NULL, hInst, NULL);
 		if (!hMainWnd) return FALSE;
 		ShowWindow(hMainWnd, ss);
@@ -65,19 +65,19 @@ namespace MainWindow {
 		switch (msg) {
 		// При создании окна создаём в нём кнопки
 		case WM_CREATE:
-			CreateWindow(L"button", L"Ћаб. 1", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+			CreateWindow(L"button", L"Лаб. 1", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
 				15, 15, 100, 20, hw, (HMENU)ID_MYBUTTON_LAB1, NULL, NULL);
-			CreateWindow(L"button", L"Ћаб. 2", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+			CreateWindow(L"button", L"Лаб. 2", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
 				130, 15, 100, 20, hw, (HMENU)ID_MYBUTTON_LAB2, NULL, NULL);
-			CreateWindow(L"button", L"Ћаб. 3", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+			CreateWindow(L"button", L"Лаб. 3", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
 				15, 50, 100, 20, hw, (HMENU)ID_MYBUTTON_LAB3, NULL, NULL);
-			CreateWindow(L"button", L"Ћаб. 4", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+			CreateWindow(L"button", L"Лаб. 4", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
 				130, 50, 100, 20, hw, (HMENU)ID_MYBUTTON_LAB4, NULL, NULL);
-			CreateWindow(L"button", L"Ћаб. 5", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
+			CreateWindow(L"button", L"Лаб. 5", WS_CHILD | BS_PUSHBUTTON | WS_VISIBLE,
 				15, 85, 100, 20, hw, (HMENU)ID_MYBUTTON_LAB5, NULL, NULL);
 			return 0;
 
-		// Обработчики нажати¤ кнопок
+		// Обработчики нажатия кнопок
 		case WM_COMMAND:
 			hiWord = HIWORD(wp); loWord = LOWORD(wp);
 			if ((hiWord == 0) && (loWord == ID_MYBUTTON_LAB1)) lab1::Lab1Exec();
